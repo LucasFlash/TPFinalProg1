@@ -51,15 +51,7 @@ if (isset($_SESSION['usuario'])) {
                        $sumMacho = $sumMacho + 1; 
                        $ResultMacho = $ResultMacho + $Result; }
                        }
-
-
-
-
-          $promedio = "PROMEDIO" . $ResultTotal / $sum . ", PROM MACH" . $ResultMacho / $sumMacho . ",," ;
-
-         
-
-        
+  
         
 ?>
 

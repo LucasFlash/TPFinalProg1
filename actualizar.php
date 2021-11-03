@@ -27,11 +27,7 @@ if (isset($_POST['nombre_hamster'])) {
     header('Location: ' . $redirigir);
 }
 
-
-
-
 ?>
-
 
 
 <!DOCTYPE html>
@@ -68,8 +64,4 @@ if (isset($_POST['nombre_hamster'])) {
         <input name="nombre_hamster"></input><br>
         <input type="submit" value="Añadir" class="btn btn-primary">
         </form>  
-            <?php
-   
-         
-        ?>
         

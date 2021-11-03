@@ -112,6 +112,20 @@ class RepositorioHamster
 
 
 
+        public function actualizarHamster($nombre_hamster, $id_hamster)
+    {
+        
+       
+           $n = $id_hamster;
+        $q = "UPDATE hamster SET nombre_hamster = ? WHERE id_hamster = ?";
+
+        $query = self::$conexion->prepare($q);
+        $query->bind_param("si", $nombre_hamster, $n);
+
+        return $query->execute();
+    }
+
+
 
    }
 
