@@ -64,4 +64,5 @@ if (isset($_POST['nombre_hamster'])) {
         <input name="nombre_hamster"></input><br>
         <input type="submit" value="Añadir" class="btn btn-primary">
         </form>  
+        <?php echo $_GET['n'];?>
         

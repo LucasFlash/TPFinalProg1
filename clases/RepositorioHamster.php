@@ -116,7 +116,7 @@ class RepositorioHamster
     {
         
        
-           $n = $id_hamster;
+        $n = $id_hamster;
         $q = "UPDATE hamster SET nombre_hamster = ? WHERE id_hamster = ?";
 
         $query = self::$conexion->prepare($q);

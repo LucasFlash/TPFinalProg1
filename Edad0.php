@@ -19,14 +19,14 @@ if (isset($_SESSION['usuario'])) {
                $ResultMacho = 0;
                
                $edadFinal = array();
-               $count = count($hamster);
+               
 
 
 
 
             foreach ($hamster as $unHamster) {
 
-                $n = $unHamster->getId_hamster();
+                
                 $sex = $unHamster->getSexo_hamster();
                 $sum = $sum + 1;
       

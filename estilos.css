@@ -1,0 +1,30 @@
+body {
+	background-color: white;
+}
+p.fuente{ text-align: left;
+ }
+td.td1{ height: 25px;
+ }
+ div.estilo1{ 
+ 	width: 100%;
+ 	height: 100px;
+ }
+  div.estilo2{ 
+ 	width: 100%;
+ 	height: 80px;
+ }
+ tr.tr1 {
+   line-height: 25px;
+   min-height: 25px;
+   height: 25px;
+}
+td.td1 {
+        line-height: 55px;
+    }
+div.fuente1 {
+    font-size: 14.5px;
+  font-family: "arial", serif;
+  font-style: italic;
+  color: #B45F04;
+    
+    }

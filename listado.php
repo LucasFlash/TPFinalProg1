@@ -18,6 +18,7 @@ require_once "edad0.php";
         <meta name="viewport" content="width=device-width">
         <title>Sistema bancario</title>
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
 
 
         
@@ -38,7 +39,9 @@ require_once "edad0.php";
 
          <div class="row">
          <div class="col-md-6">
+            <div class="estilo1"> 
          <table class="table table-striped">
+         
             <tr>
                 <th>Nombre</th><th>Sexo</th>
             </tr>
@@ -58,16 +61,19 @@ require_once "edad0.php";
                 else { $sex = "Macho"; }
                       
                 echo '<tr>'; 
-                echo "<td id='Nombre-$n'>".$unHamster->getNombre_hamster()."</td>";
-                echo "<td id='Sexo-$n'>".$sex."</td>";
+                echo "<td class='td1' id='Nombre-$n'>".$unHamster->getNombre_hamster()."</td>";
+                echo "<td class='td1' id='Sexo-$n'>".$sex."</td>";
                }
                }
                ?>
+           
              </table>
+               </div>
              </div>
             
                
              <div class="col-md-6">
+                 <div class="estilo2"> 
              <table class="table table-striped">
             <tr>
                 <th>Edad en Meses</th><th colspan="2">Modificaciones</th>
@@ -75,13 +81,15 @@ require_once "edad0.php";
               <?php
                foreach ($edadFinal as $eFinal) {
                 $e = $eFinal ;
-                echo "<td>" . $e . "</td>" ;
-                echo "<td><button type='button'><a href='actualizar.php?n=$n'>Cambiar Nombre</button></td>";
-                echo "<td><button type='button'><a href='eliminar.php?n=$n'>Eliminar</button></a></td>";
+                 echo '<tr>';
+                echo "<td class='td1'>" . $e . "</td>" ;
+                echo "<td class='td1'><button class='btn btn-light' type='button'><a href='actualizar.php?n=$n'>Cambiar Nombre</button></td>";
+                echo "<td class='td1'><button class='btn btn-danger' type='button'><a href='eliminar.php?n=$n'>Eliminar</button></a></td></div>";
                 echo '</tr>';
                 }
                 ?>
             </table>
+        </div>
             </div>
 
 
