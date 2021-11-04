@@ -6,14 +6,6 @@ require_once 'clases/Hamster.php';
 
 
 
-session_start();
-if (isset($_SESSION['usuario']) && isset($_GET['n'])) {
-    $usuario = unserialize($_SESSION['usuario']);
-    $rc = new RepositorioHamster();
-    $hamster = $rc->get_one($_GET['n']);
-
-
-}
 
 if (isset($_POST['nombre_hamster'])) { 
     $rc = new RepositorioHamster();
@@ -42,11 +34,6 @@ if (isset($_POST['nombre_hamster'])) {
         
     </head>
     <body class="container">
-
- 
-
-
-
 
       <div class="jumbotron text-center">
       <h1>Sistema bancario</h1>

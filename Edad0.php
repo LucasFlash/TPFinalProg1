@@ -13,9 +13,12 @@ if (isset($_SESSION['usuario'])) {
     
      }
 
+
+
+
                $sum = 0;
                $sumMacho = 0;
-               $ResultTotal = 0;
+                $ResultTotal = 0;
                $ResultMacho = 0;
                
                $edadFinal = array();
@@ -26,11 +29,11 @@ if (isset($_SESSION['usuario'])) {
 
             foreach ($hamster as $unHamster) {
 
-                
+                $n = $unHamster->getId_hamster();
                 $sex = $unHamster->getSexo_hamster();
                 $sum = $sum + 1;
       
-
+                echo $n;
                 $edad = $unHamster->getFechaNac_hamster();
                 $yearh = date('Y', strtotime($edad));
                 $monthh = date('m', strtotime($edad));
@@ -50,9 +53,11 @@ if (isset($_SESSION['usuario'])) {
                 else { $sex = "Macho";
                        $sumMacho = $sumMacho + 1; 
                        $ResultMacho = $ResultMacho + $Result; }
+
                        }
   
-        
+
+       
 ?>
 
 

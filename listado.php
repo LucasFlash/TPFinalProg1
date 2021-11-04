@@ -6,7 +6,6 @@ require_once 'clases/RepositorioHamster.php';
 require_once "edad0.php";
 
 
-
 ?>
 
 
@@ -38,8 +37,7 @@ require_once "edad0.php";
         <h3>Listado de Hamsters</h3>
 
          <div class="row">
-         <div class="col-md-6">
-            <div class="estilo1"> 
+         <div class="col-md-4">
          <table class="table table-striped">
          
             <tr>
@@ -48,7 +46,7 @@ require_once "edad0.php";
         <?php
    
         if (count($hamster) == 0) {
-            echo "<tr><td colspan='5'>No tiene cuentas creadas</td></tr>";
+            echo "<tr><td colspan='3'>No tiene cuentas creadas</td></tr>";
         }
          else {
             
@@ -63,34 +61,48 @@ require_once "edad0.php";
                 echo '<tr>'; 
                 echo "<td class='td1' id='Nombre-$n'>".$unHamster->getNombre_hamster()."</td>";
                 echo "<td class='td1' id='Sexo-$n'>".$sex."</td>";
-               }
-               }
-               ?>
-           
-             </table>
-               </div>
-             </div>
-            
-               
-             <div class="col-md-6">
-                 <div class="estilo2"> 
+                echo '</tr>';
+                }
+                 }
+                ?>
+                </table>
+            </div>
+              <div class="col-md-2">
+                 <div> 
              <table class="table table-striped">
             <tr>
-                <th>Edad en Meses</th><th colspan="2">Modificaciones</th>
+                <th>Edad en Meses</th>
             </tr>
               <?php
                foreach ($edadFinal as $eFinal) {
                 $e = $eFinal ;
                  echo '<tr>';
                 echo "<td class='td1'>" . $e . "</td>" ;
-                echo "<td class='td1'><button class='btn btn-light' type='button'><a href='actualizar.php?n=$n'>Cambiar Nombre</button></td>";
-                echo "<td class='td1'><button class='btn btn-danger' type='button'><a href='eliminar.php?n=$n'>Eliminar</button></a></td></div>";
                 echo '</tr>';
+
                 }
                 ?>
             </table>
-        </div>
+        </div></div>
+     <div class="col-md-6">
+             <table class="table table-striped">
+            <tr>
+                <th colspan="2"><div class="text-center">Modificaciones</div></th>
+            </tr>
+              <?php
+                 foreach ($hamster as $unHamster) {
+                 $n = $unHamster->getId_hamster();
+                 echo '<tr>';
+                 echo "<td class='td1'><button class='btn btn-light' type='button'><a href='actualizar.php?n=$n'>Cambiar Nombre</button></td>";
+                 echo "<td class='td1'><button class='btn btn-danger' type='button'><a href='eliminar.php?n=$n'>Eliminar</button></a></td>";
+                 echo '</tr>';
+                
+               }
+               ?>
+           
+             </table>
+               </div>
+             </div>
             </div>
-
-
+               
   

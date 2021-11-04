@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Bienvenido al sistema</title>
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
     </head>
     <body class="container">
       <div class="jumbotron text-center">
@@ -12,8 +13,8 @@
       </div>    
 
 
+ <div class="text-center">
      <div class="fuente1">
-    
           Los cricetinos (Cricetinae) son una subfamilia de roedores, conocidos comúnmente como hámsteres (un germanismo).<br>
           Se han identificado diecinueve especies actuales, agrupadas en siete géneros. La mayoría son originarias de Oriente Medio y del sureste de los Estados Unidos. Todas las especies se caracterizan por las bolsas expansibles, llamadas abazones, ubicadas en el interior de la boca y que van desde las mejillas hasta los hombros. <br>
           Al ser muy fáciles de criar en cautividad, son ampliamente usados como animales de laboratorio y como mascotas.<br>
@@ -21,9 +22,8 @@
           En este Web-Site usted como Cuidador, podra tener un registro detallado de cada Hamster que tiene a su cargo.<br>
           Sera capaz de registrar su Nombre, Sexo, y fecha de nacimiento. Si algun Hamster es adoptado, se podra modificar su nombre!<br>
           Por ùltimo, podra generar un informe con informacion general sobre su listado de Hamsters.
-  
+  </div>
 </div>
-
 
 
 
