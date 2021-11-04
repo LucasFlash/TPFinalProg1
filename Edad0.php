@@ -20,6 +20,9 @@ if (isset($_SESSION['usuario'])) {
                $sumMacho = 0;
                 $ResultTotal = 0;
                $ResultMacho = 0;
+                $menores = 0;
+                $mayores = 0;
+                $adultos = 0;
                
                $edadFinal = array();
                
@@ -33,13 +36,20 @@ if (isset($_SESSION['usuario'])) {
                 $sex = $unHamster->getSexo_hamster();
                 $sum = $sum + 1;
       
-                echo $n;
+               
                 $edad = $unHamster->getFechaNac_hamster();
                 $yearh = date('Y', strtotime($edad));
                 $monthh = date('m', strtotime($edad));
                 $ayear = date('Y');
                 $amonth = date('m');
                 $Result = ( ( $ayear - $yearh - 1 ) * 12 ) + ( 12 - $monthh ) + ( $amonth );
+                    if ( $Result < 5) 
+                    { $menores = $menores + 1; }
+                    else  { if ( $Result > 24) 
+                    { $mayores = $mayores + 1; } 
+                     else {$adultos = $adultos + 1;}
+                     }
+
                 $edadFinal[] = $Result;
               
                 
@@ -55,9 +65,10 @@ if (isset($_SESSION['usuario'])) {
                        $ResultMacho = $ResultMacho + $Result; }
 
                        }
-  
+                $Promedio = $ResultTotal / $sum;
+                $PromedioMacho = $ResultMacho / $sumMacho;
+                $PromedioHembra = ($ResultTotal - $ResultMacho) / ($sum - $sumMacho);
 
-       
 ?>
 
 

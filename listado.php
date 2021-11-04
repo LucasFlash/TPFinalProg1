@@ -15,7 +15,7 @@ require_once "edad0.php";
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Sistema bancario</title>
+        <title>Registro Online de Hamsters</title>
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="estilos.css">
 
@@ -104,5 +104,90 @@ require_once "edad0.php";
                </div>
              </div>
             </div>
-               
-  
+        <div class="row">
+         <div class="col-md-4">
+                <button type="button" id="btn-informeG">Informe General de Hamsters</button>
+                         <span align="center">
+                        <p id="informeG"></p>
+        </span>
+        <script>
+      document.querySelector('#btn-informeG').addEventListener('click',informeG);
+function informeG()
+{
+
+       var solicitud = new XMLHttpRequest();
+        //Definimos qué habrá que hacer cuando cambie la propiedad onreadystate:
+        solicitud.onreadystatechange = function() {
+
+          //Si salió todo bien...
+          if(this.readyState == 4 && this.status == 200) {
+
+              var promedio = (this.responseText);
+             document.querySelector('#informeG').innerHTML = promedio;
+        }
+
+        };
+         solicitud.open("GET", "PromedioG.php", true);
+            solicitud.send();
+}
+
+</script></div>
+ 
+         <div class="col-md-4">
+
+                <button type="button" id="btn-informeM">Informe de Hamster Macho</button>
+                 <span align="center">
+            <p id="informeM"></p>
+         <span align="center">
+        <script>
+      document.querySelector('#btn-informeM').addEventListener('click',informeM);
+function informeM()
+{
+
+       var solicitud = new XMLHttpRequest();
+        //Definimos qué habrá que hacer cuando cambie la propiedad onreadystate:
+        solicitud.onreadystatechange = function() {
+
+          //Si salió todo bien...
+          if(this.readyState == 4 && this.status == 200) {
+
+              var promedio = (this.responseText);
+             document.querySelector('#informeG').innerHTML = promedio;
+        }
+
+        };
+         solicitud.open("GET", "PromedioM.php", true);
+            solicitud.send();
+}
+
+</script>
+</div>
+
+         <div class="col-md-4">
+                <button type="button" id="btn-informeH">Informe de Hamster Hembra</button>
+                 <span align="center">
+            <p id="informeH"></p>
+        </span>
+        <script>
+      document.querySelector('#btn-informeH').addEventListener('click',informeH);
+function informeH()
+{
+
+       var solicitud = new XMLHttpRequest();
+        //Definimos qué habrá que hacer cuando cambie la propiedad onreadystate:
+        solicitud.onreadystatechange = function() {
+
+          //Si salió todo bien...
+          if(this.readyState == 4 && this.status == 200) {
+
+              var promedio = (this.responseText);
+             document.querySelector('#informeG').innerHTML = promedio;
+        }
+
+        };
+         solicitud.open("GET", "PromedioH.php", true);
+            solicitud.send();
+}
+
+</script>
+</div></div>
