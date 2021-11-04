@@ -134,11 +134,10 @@ function informeG()
 </script></div>
  
          <div class="col-md-4">
-
-                <button type="button" id="btn-informeM">Informe de Hamster Macho</button>
-                 <span align="center">
+         <div align="center">
+                <button type="button" id="btn-informeM">Informe de Hamster Macho</button>         
             <p id="informeM"></p>
-         <span align="center">
+        </div>
         <script>
       document.querySelector('#btn-informeM').addEventListener('click',informeM);
 function informeM()
@@ -164,10 +163,10 @@ function informeM()
 </div>
 
          <div class="col-md-4">
+            <div class="text-center">
                 <button type="button" id="btn-informeH">Informe de Hamster Hembra</button>
-                 <span align="center">
             <p id="informeH"></p>
-        </span>
+         </div>
         <script>
       document.querySelector('#btn-informeH').addEventListener('click',informeH);
 function informeH()

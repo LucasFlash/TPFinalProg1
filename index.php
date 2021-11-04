@@ -25,11 +25,6 @@
   </div>
 </div>
 
-
-
-
-
-
       <div class="text-center">
         <h3>Login de Usuario</h3>
         <?php
