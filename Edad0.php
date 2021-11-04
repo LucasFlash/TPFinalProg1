@@ -65,9 +65,15 @@ if (isset($_SESSION['usuario'])) {
                        $ResultMacho = $ResultMacho + $Result; }
 
                        }
-                $Promedio = $ResultTotal / $sum;
-                $PromedioMacho = $ResultMacho / $sumMacho;
-                $PromedioHembra = ($ResultTotal - $ResultMacho) / ($sum - $sumMacho);
+                  if ( $sum > 0){
+                $Promedio = $ResultTotal / $sum;} else {
+                $Promedio = 0;} 
+                  if ( $sumMacho > 0){
+                $PromedioMacho = $ResultMacho / $sumMacho;} else {
+                $PromedioMacho = 0;}
+                  if ( ($sum - $sumMacho) > 0){
+                $PromedioHembra = ($ResultTotal - $ResultMacho) / ($sum - $sumMacho);} else {
+                $PromedioHembra = 0;}
 
 ?>
 

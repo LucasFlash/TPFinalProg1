@@ -15,6 +15,7 @@ if (isset($_SESSION['usuario'])) {
         <meta name="viewport" content="width=device-width">
         <title>Sistema bancario</title>
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
     </head>
     <body class="container">
       <div class="jumbotron text-center">
@@ -29,13 +30,12 @@ if (isset($_SESSION['usuario'])) {
 
       </div>    
       <div class="text-center">
-        <h3>Hola <?php echo $nomApe;?></h3>
-        <h6>
-        <a href="listado.php">Listado de Hamsters</a><br>
-        <a href="createHamster.php">Añadir</a><br>
-        <a href="borrar.php">Actualizar</a><br>
-        <a href="calcularEdad.php">Borrar</a><br>
-        <p><a href="logout.php">Cerrar sesión</a></p>
+        <h3 class="h31">Hola <?php echo $nomApe;?></h3>
+        <h5 class="h51">¿ Que desea hacer ?</h5>
+        <h6 class="h61">
+        <a href="listado.php">Ver Listado de Hamsters</a><br>
+        <a href="createHamster.php">Añadir un Hamster al Registro</a><br>
+        <p><a href="logout.php">Cerrar Sesión</a></p></h6>
       </div> 
     </body>
 </html>

@@ -6,9 +6,12 @@ require_once 'Edad0.php';
 
 
 
-
-         echo "Hay un total de " . $sumMacho . "  Hamsters Macho, el Promnedio de edad en meses es " . $PromedioMacho . " . "
-          
+         if ( $PromedioMacho > 0 ){
+         echo "Hay un total de " . $sumMacho . "  Hamsters Macho, el Promnedio de edad en meses es " . $PromedioMacho . " . ";
+          }
+          else {
+         echo " No hay Hamsters Macho en su Listado ";
+          }
        
 ?>
 

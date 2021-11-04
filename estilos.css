@@ -1,10 +1,12 @@
 body {
-	background-color: white;
+	background-color: #F9FD06;
 }
 p.fuente{ text-align: left;
  }
 td.td1 {
         line-height: 60px;
+        color: violet;
+        font-size: 25px;
     }
  div.estilo1{ 
  	width: 100%;
@@ -32,10 +34,30 @@ div.fuente1 {
   background-color:black;
   text-align: center;
     }
+    h3.h31{
+        line-height: 60px;
+        color: violet;
+        font-size: 25px;
+    }
+    h2.h21{
+        line-height: 60px;
+        color: blue;
+        font-size: 25px;
+    }
+        h5.h51{
+        line-height: 60px;
+        color: blue;
+        font-size: 25px;
+    }
+        h6.h61{
+        line-height: 60px;
+        color: blue;
+        font-size: 25px;
+    }
 
 
 
-    ------------------
+  
 
 
 

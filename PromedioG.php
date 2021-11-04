@@ -7,8 +7,10 @@ require_once 'Edad0.php';
 
 
 
-
-               echo "Hay un total de " . $sum . "  Hamsters, el Promnedio General de edad en meses es " . $Promedio . " . " . $menores . " Hamsters aun no son adultos, y no pueden tener crìas, asi como tambien hay " . $mayores . " Hamsters   de edad avanzada ( más de 24 meses ), se recomienda tener especial cuidado en ellos.";
+               if ( $sum > 0){
+               echo "Hay un total de " . $sum . "  Hamsters, el Promnedio General de edad en meses es " . $Promedio . " . " . $menores . " Hamsters aun no son adultos, y no pueden tener crìas, asi como tambien hay " . $mayores . " Hamsters   de edad avanzada ( más de 24 meses ), se recomienda tener especial cuidado en ellos."; } 
+               else {
+                     echo "No hay Hamsters en su Listado ";} 
           
        
 ?>

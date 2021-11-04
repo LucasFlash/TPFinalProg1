@@ -46,7 +46,7 @@ require_once "edad0.php";
         <?php
    
         if (count($hamster) == 0) {
-            echo "<tr><td colspan='3'>No tiene cuentas creadas</td></tr>";
+            echo "<tr><td colspan='3'>No Tiene Hamsters Registrados</td></tr>";
         }
          else {
             
@@ -73,14 +73,19 @@ require_once "edad0.php";
             <tr>
                 <th>Edad en Meses</th>
             </tr>
+
               <?php
+                      if (count($hamster) == 0) {
+            echo "<tr><td colspan='3'>No Tiene Hamsters Registrados</td></tr>";
+        }
+         else {
                foreach ($edadFinal as $eFinal) {
                 $e = $eFinal ;
                  echo '<tr>';
                 echo "<td class='td1'>" . $e . "</td>" ;
                 echo '</tr>';
 
-                }
+                }}
                 ?>
             </table>
         </div></div>
@@ -90,6 +95,10 @@ require_once "edad0.php";
                 <th colspan="2"><div class="text-center">Modificaciones</div></th>
             </tr>
               <?php
+                      if (count($hamster) == 0) {
+            echo "<tr><td colspan='3'>No Tiene Hamsters Registrados</td></tr>";
+        }
+         else {
                  foreach ($hamster as $unHamster) {
                  $n = $unHamster->getId_hamster();
                  echo '<tr>';
@@ -97,7 +106,7 @@ require_once "edad0.php";
                  echo "<td class='td1'><button class='btn btn-danger' type='button'><a href='eliminar.php?n=$n'>Eliminar</button></a></td>";
                  echo '</tr>';
                 
-               }
+               }}
                ?>
            
              </table>
@@ -106,7 +115,7 @@ require_once "edad0.php";
             </div>
         <div class="row">
          <div class="col-md-4">
-                <button type="button" id="btn-informeG">Informe General de Hamsters</button>
+                <button class="btn btn-info" type="button" id="btn-informeG">Informe General de Hamsters</button>
                          <span align="center">
                         <p id="informeG"></p>
         </span>
@@ -135,7 +144,7 @@ function informeG()
  
          <div class="col-md-4">
          <div align="center">
-                <button type="button" id="btn-informeM">Informe de Hamster Macho</button>         
+                <button class="btn btn-info" type="button" id="btn-informeM">Informe de Hamster Macho</button>         
             <p id="informeM"></p>
         </div>
         <script>
@@ -164,7 +173,7 @@ function informeM()
 
          <div class="col-md-4">
             <div class="text-center">
-                <button type="button" id="btn-informeH">Informe de Hamster Hembra</button>
+                <button class="btn btn-info" type="button" id="btn-informeH">Informe de Hamster Hembra</button>
             <p id="informeH"></p>
          </div>
         <script>
