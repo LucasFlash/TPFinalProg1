@@ -30,10 +30,7 @@ div.fuente1 {
    background-color: yellow;
     
     }
-    article.fuente2{
-  background-color:black;
-  text-align: center;
-    }
+
     h3.h31{
         line-height: 60px;
         color: violet;
@@ -55,9 +52,11 @@ div.fuente1 {
         font-size: 25px;
     }
 
+      h6.h32{
+        text-align: center;
+        color: red;
 
-
-  
+    }
 
 
 

@@ -29,6 +29,7 @@ if (isset($_POST['nombre_hamster'])) {
         <meta name="viewport" content="width=device-width">
         <title>Actualizar Nombre de un Hamster</title>
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
 
 
         
@@ -36,7 +37,7 @@ if (isset($_POST['nombre_hamster'])) {
     <body class="container">
 
       <div class="jumbotron text-center">
-      <h1>Sistema bancario</h1>
+      <h1>Criadero de Hamsters</h1>
       </div>    
       <div class="text-center">
         <?php
@@ -45,11 +46,11 @@ if (isset($_POST['nombre_hamster'])) {
         }
         ?>
         
-        <h3>Listado de Hamsters</h3>
+        <h3 class="h31">Ingrese el Nuevo Nombre del Hamster</h3>
          <form action="actualizar.php" method="post">
           <input type="hidden" name="num_hamster" value="<?php echo $_GET['n'];?>"> </input><br>  
-        <input name="nombre_hamster"></input><br>
+        <input name="nombre_hamster"></input><br><br>
         <input type="submit" value="Añadir" class="btn btn-primary">
         </form>  
-        <?php echo $_GET['n'];?>
+        
         

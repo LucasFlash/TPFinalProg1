@@ -1,5 +1,5 @@
 <?php
-require_once 'clases/Usuario.php';//LE PEDIMOS ESOS DATOS DE USUARIO PARA MOSTRAR EN UN MENSAJE DE BIENVENIDA//
+require_once 'clases/Usuario.php';
 session_start();
 if (isset($_SESSION['usuario'])) {
     $usuario = unserialize($_SESSION['usuario']);
@@ -19,7 +19,7 @@ if (isset($_SESSION['usuario'])) {
     </head>
     <body class="container">
       <div class="jumbotron text-center">
-      <h1>Sistema bancario</h1>
+      <h1>Criadero de Hamsters</h1>
 	          <?php
             if (isset($_GET['mensaje'])) {
                 echo '<div id="mensaje" class="alert alert-primary text-center">
@@ -35,6 +35,7 @@ if (isset($_SESSION['usuario'])) {
         <h6 class="h61">
         <a href="listado.php">Ver Listado de Hamsters</a><br>
         <a href="createHamster.php">Añadir un Hamster al Registro</a><br>
+        <a href="infohamster.html">Información</a><br>
         <p><a href="logout.php">Cerrar Sesión</a></p></h6>
       </div> 
     </body>

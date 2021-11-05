@@ -33,8 +33,8 @@ require_once "edad0.php";
             echo '<p class="alert alert-primary">'.$_GET['mensaje'].'</p>';
         }
         ?>
-        <h3><?php echo $nomApe;?></h3>
-        <h3>Listado de Hamsters</h3>
+        <h3 class="h31"><?php echo $nomApe;?></h3>
+        <h3 class="h31">Listado de Hamsters</h3>
 
          <div class="row">
          <div class="col-md-4">
@@ -116,9 +116,8 @@ require_once "edad0.php";
         <div class="row">
          <div class="col-md-4">
                 <button class="btn btn-info" type="button" id="btn-informeG">Informe General de Hamsters</button>
-                         <span align="center">
-                        <p id="informeG"></p>
-        </span>
+                         
+                        <h6 class="h32" id="informeG"></h6>
         <script>
       document.querySelector('#btn-informeG').addEventListener('click',informeG);
 function informeG()
@@ -145,7 +144,7 @@ function informeG()
          <div class="col-md-4">
          <div align="center">
                 <button class="btn btn-info" type="button" id="btn-informeM">Informe de Hamster Macho</button>         
-            <p id="informeM"></p>
+            <h6 class="h32" id="informeM"></h6>
         </div>
         <script>
       document.querySelector('#btn-informeM').addEventListener('click',informeM);
@@ -174,7 +173,7 @@ function informeM()
          <div class="col-md-4">
             <div class="text-center">
                 <button class="btn btn-info" type="button" id="btn-informeH">Informe de Hamster Hembra</button>
-            <p id="informeH"></p>
+           <h6 class="h32" id="informeH"></h6>
          </div>
         <script>
       document.querySelector('#btn-informeH').addEventListener('click',informeH);

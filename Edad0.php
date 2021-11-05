@@ -63,8 +63,7 @@ if (isset($_SESSION['usuario'])) {
                 else { $sex = "Macho";
                        $sumMacho = $sumMacho + 1; 
                        $ResultMacho = $ResultMacho + $Result; }
-
-                       }
+                       
                   if ( $sum > 0){
                 $Promedio = $ResultTotal / $sum;} else {
                 $Promedio = 0;} 
@@ -74,7 +73,6 @@ if (isset($_SESSION['usuario'])) {
                   if ( ($sum - $sumMacho) > 0){
                 $PromedioHembra = ($ResultTotal - $ResultMacho) / ($sum - $sumMacho);} else {
                 $PromedioHembra = 0;}
+                }
 
 ?>
-
-
